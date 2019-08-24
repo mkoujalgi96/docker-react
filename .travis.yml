@@ -2,7 +2,7 @@ language: generic
 sudo: required
 services:
   - docker
-before-install:
+before_install:
   - docker build -t build -f Dockerfile.dev .
 script:
   - docker run -e CI=true build npm run test
